@@ -12,6 +12,7 @@ Also on [Greasy Fork](https://greasyfork.org/en/scripts/8621-wordpress-com-class
 
 ## Known Issues
 * The new interface may start loading and appear before the redirect occurs
+* Once access to the old stats page has been revoked by WordPress.com staff (which they say they will do eventually), this script will cease to work
 
 ## Changelog
 * **v1.0.0:** Initial release
