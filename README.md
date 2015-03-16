@@ -6,7 +6,7 @@ If you don't already have one, install [a browser extension](https://greasyfork.
 
 [https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/raw/master/wpcom-stats-redirect.user.js](https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/raw/master/wpcom-stats-redirect.user.js)
 
-<!--Also on [Greasy Fork](https://greasyfork.org/en/scripts/8581-wordpress-com-edit-post-redirects).-->
+Also on [Greasy Fork](https://greasyfork.org/en/scripts/8621-wordpress-com-classic-stats).
 
 ## Known Issues
 * The new interface may start loading and appear before the redirect occurs
