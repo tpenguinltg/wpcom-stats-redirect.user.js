@@ -3,7 +3,7 @@
 // @namespace   tpenguinltg
 // @description Redirects the new stats page to the classic stats page
 // @include     https://wordpress.com/stats*
-// @version     1.0.0
+// @version     1.0.1
 // @updateURL   https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/raw/master/wpcom-stats-redirect.user.js
 // @homepageURL https://greasyfork.org/en/scripts/8621-wordpress-com-classic-stats
 // @homepageURL https://github.com/tpenguinltg/wpcom-stats-redirect.user.js
@@ -17,13 +17,16 @@ var parsedUrl=window.location.pathname.match(/stats(\/([^\/]*))?/);
 var blogDomain=parsedUrl[2];
 
 // Function by dystroy. From http://stackoverflow.com/a/14388512
-function fetchJSONFile(path, callback) {
+function fetchJSONFile(path, callback, fallback) {
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function() {
         if (httpRequest.readyState === 4) {
             if (httpRequest.status === 200) {
                 var data = JSON.parse(httpRequest.responseText);
                 if (callback) callback(data);
+            }//if
+            else {
+                if(fallback) fallback();
             }//end if
         }//end if
     };//end onreadystatechange()
@@ -40,7 +43,17 @@ if(!blogDomain) {
 else {
   // Redirect to post URL based on API results
   // API docs: https://developer.wordpress.com/docs/api/
-  fetchJSONFile("https://public-api.wordpress.com/rest/v1.1/sites/"+blogDomain, function(data) {
-    window.location.replace("https://wordpress.com/my-stats/?blog="+data.ID);
-  });
+  fetchJSONFile("https://public-api.wordpress.com/rest/v1.1/sites/"+blogDomain,
+      // attempt to redirect using API
+      function(data) {
+        window.location.replace("https://wordpress.com/my-stats/?blog="+data.ID);
+      },
+      // fallback: scrape page for URL
+      function() {
+        // scrape the edit URL from the page when the DOM has finished loading
+        window.onload=function() {
+          var classicLink=document.getElementsByClassName("switch-stats")[0].children[0].children[0].href;
+          window.location.replace(classicLink);
+        }; //end window.onload
+      });
 }//end if
