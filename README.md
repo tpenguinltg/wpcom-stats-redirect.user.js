@@ -12,9 +12,11 @@ Also on [Greasy Fork](https://greasyfork.org/en/scripts/8621-wordpress-com-class
 
 ## Known Issues
 * The new interface may start loading and appear before the redirect occurs
-* Once access to the old stats page has been revoked by WordPress.com staff (which they say they will do eventually), this script will cease to work
+* The redirection will likely fail for Jetpack-enabled sites whose site root is
+  different from their installation root 
 
 ## Changelog
 * **v1.0.0:** Initial release
 * **v1.0.1:** Fix redirect for private and Jetpack-enabled blogs
 * **v1.0.2:** "Fix" infinite redirect caused by old stats page being taken down.
+* **v2.0.0:** Redirect to the classic dashboard stats page instead
