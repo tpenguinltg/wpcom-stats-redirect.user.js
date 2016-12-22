@@ -23,21 +23,19 @@ var blogDomain=parsedUrl[2];
 
 // Function by dystroy. From http://stackoverflow.com/a/14388512
 function fetchJSONFile(path, callback, fallback) {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState === 4) {
-            if (httpRequest.status === 200) {
-                var data = JSON.parse(httpRequest.responseText);
-                if (callback) callback(data);
-            }//if
-            else {
-                if(fallback) fallback();
-            }//end if
-        }//end if
-    };//end onreadystatechange()
-    httpRequest.open('GET', path);
-    httpRequest.send(); 
-}//end fetchJSONFile
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.onreadystatechange = function() {
+    if (httpRequest.readyState === 4) {
+      if (httpRequest.status === 200) {
+        if (callback) callback(JSON.parse(httpRequest.responseText));
+      } else if (fallback) {
+        fallback();
+      }
+    }
+  };
+  httpRequest.open('GET', path);
+  httpRequest.send();
+}
 
 
 // if general stats page (i.e. no domain given)
