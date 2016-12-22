@@ -16,3 +16,5 @@ Also on [Greasy Fork](https://greasyfork.org/en/scripts/8621-wordpress-com-class
 
 ## Changelog
 * **v1.0.0:** Initial release
+* **v1.0.1:** Fix redirect for private and Jetpack-enabled blogs
+* **v1.0.2:** "Fix" infinite redirect caused by old stats page being taken down.

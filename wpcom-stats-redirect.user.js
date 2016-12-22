@@ -3,7 +3,7 @@
 // @namespace   tpenguinltg
 // @description Redirects the new stats page to the classic stats page
 // @include     https://wordpress.com/stats*
-// @version     1.0.1
+// @version     1.0.2
 // @updateURL   https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/raw/master/wpcom-stats-redirect.user.js
 // @homepageURL https://greasyfork.org/en/scripts/8621-wordpress-com-classic-stats
 // @homepageURL https://github.com/tpenguinltg/wpcom-stats-redirect.user.js
@@ -12,6 +12,11 @@
 // @copyright   2015, tPenguinLTG (http://tpenguinltg.wordpress.com/)
 // @run-at      document-start
 // ==/UserScript==
+
+// The old stats page has been taken offline.
+// Until a fix can be made (if that's even possible),
+// return early to prevent an infinite redirect
+return;
 
 var parsedUrl=window.location.pathname.match(/stats(\/([^\/]*))?/);
 var blogDomain=parsedUrl[2];
