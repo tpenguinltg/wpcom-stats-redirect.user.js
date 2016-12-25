@@ -1,5 +1,5 @@
 # wpcom-stats-redirect.user.js
-[WordPress.com](https://wordpress.com/) is trying to push its new interfaces, including the new stats page. This user script forces a redirect to the old stats page when the new stats page is visited.
+[WordPress.com](https://wordpress.com/) is trying to push its new interfaces, including the new stats page. This user script forces a redirect to the classic dashboard stats page when the new stats page is visited.
 
 This script is based on [wpcom-edit-post-redirect.user.js](https://github.com/tpenguinltg/wpcom-edit-post-redirect.user.js).
 
