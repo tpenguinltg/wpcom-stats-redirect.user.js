@@ -20,3 +20,4 @@ Also on [Greasy Fork](https://greasyfork.org/en/scripts/8621-wordpress-com-class
 * **v1.0.1:** Fix redirect for private and Jetpack-enabled blogs
 * **v1.0.2:** "Fix" infinite redirect caused by old stats page being taken down.
 * **v2.0.0:** Redirect to the classic dashboard stats page instead
+* **v2.0.1:** Fix regex to match URLs without a stats type.
