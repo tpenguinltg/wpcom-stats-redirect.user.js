@@ -3,7 +3,7 @@
 // @namespace   tpenguinltg
 // @description Redirects the new stats page to the classic stats page
 // @include     https://wordpress.com/stats/*
-// @version     2.0.0
+// @version     2.0.1
 // @updateURL   https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/raw/master/wpcom-stats-redirect.user.js
 // @homepageURL https://greasyfork.org/en/scripts/8621-wordpress-com-classic-stats
 // @homepageURL https://github.com/tpenguinltg/wpcom-stats-redirect.user.js
@@ -13,7 +13,7 @@
 // @run-at      document-start
 // ==/UserScript==
 
-var parsedUrl = window.location.pathname.match(/stats\/(insights|day|week|month|year)(?:\/([^\/]*))?/);
+var parsedUrl = window.location.pathname.match(/stats(?:\/(insights|day|week|month|year))?(?:\/([^\/]*))?/);
 var statsType = parsedUrl[1];
 var blogDomain = parsedUrl[2];
 
