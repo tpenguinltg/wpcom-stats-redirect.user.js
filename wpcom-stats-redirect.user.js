@@ -48,7 +48,7 @@ function redirectToClassicStats(baseUrl, statsType) {
 }
 
 function doRedirect(uri) {
-  var parsedUri = uri.match(/stats(?:\/(insights|day|week|month|year))?(?:\/([^\/]*))?/);
+  var parsedUri = uri.match(/stats(?:\/(insights|day|week|month|year))?(?:\/countryviews)?(?:\/([^\/]*))?/);
   var statsType = parsedUri[1];
   var blogDomain = parsedUri[2];
 
