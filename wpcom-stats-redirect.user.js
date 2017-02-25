@@ -3,7 +3,7 @@
 // @namespace   tpenguinltg
 // @description Redirects the new stats page to the classic stats page
 // @include     https://wordpress.com/stats*
-// @version     2.1.1
+// @version     2.1.2
 // @updateURL   https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/raw/master/wpcom-stats-redirect.user.js
 // @homepageURL https://greasyfork.org/en/scripts/8621-wordpress-com-classic-stats
 // @homepageURL https://github.com/tpenguinltg/wpcom-stats-redirect.user.js

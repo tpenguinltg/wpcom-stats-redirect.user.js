@@ -23,3 +23,4 @@ Alternatively, visit the URL below:
 * **v2.0.1:** Fix regex to match URLs without a stats type
 * **v2.1.0:** Redirect even when there is no blog domain in the URL
 * **v2.1.1:** Ignore new countryviews and posts pages
+* **v2.1.2:** Get default blog more reliably
