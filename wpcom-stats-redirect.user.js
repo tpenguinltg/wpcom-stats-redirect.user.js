@@ -71,15 +71,16 @@ function doRedirect(uri) {
     );
   } else if (statsType != "insights") {
     window.onload = function() {
-      // the first blog listed is the user's default blog
-      var defaultBlogStatsUrl = document.querySelector("a.is-card-link").href;
-      doRedirect(defaultBlogStatsUrl);
+      // construct a stats URI from the user's default blog
+      var defaultBlogStatsUri = "/stats";
+      if (statsType) defaultBlogStatsUri += "/" + statsType;
+      defaultBlogStatsUri += "/" + currentUser.primarySiteSlug;
+      doRedirect(defaultBlogStatsUri);
     };
   } else {
     window.onload = function() {
-      // insights page; get the domain and construct an insights URI
-      blogDomain = document.querySelector(".stats-tab a").href
-      doRedirect("/stats/insights/" + blogDomain);
+      // construct an insights URI from the user's default blog
+      doRedirect("/stats/insights/" + currentUser.primarySiteSlug);
     };
   }
 }
