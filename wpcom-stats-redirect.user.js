@@ -85,4 +85,7 @@ function doRedirect(uri) {
   }
 }
 
-doRedirect(window.location.pathname);
+// redirect unless new stats is explicitly requested
+if (!window.location.search.contains("from=wp-admin")) {
+  doRedirect(window.location.pathname);
+}
