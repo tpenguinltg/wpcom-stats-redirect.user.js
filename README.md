@@ -25,3 +25,4 @@ Alternatively, visit the URL below:
 * **v2.1.1:** Ignore new countryviews and posts pages
 * **v2.1.2:** Get default blog more reliably
 * **v2.2.0:** Don't redirect if URL has `from=wp-admin` in query part
+* **v2.2.1:** Fix failed query part checking
