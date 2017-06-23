@@ -86,6 +86,6 @@ function doRedirect(uri) {
 }
 
 // redirect unless new stats is explicitly requested
-if (!window.location.search.contains("from=wp-admin")) {
+if (window.location.search.search(/from=wp-admin/) === -1) {
   doRedirect(window.location.pathname);
 }
