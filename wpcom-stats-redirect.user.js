@@ -9,7 +9,7 @@
 // @homepageURL https://github.com/tpenguinltg/wpcom-stats-redirect.user.js
 // @grant       none
 // @license     MPLv2.0; http://mozilla.org/MPL/2.0/
-// @copyright   2015-2016, tPenguinLTG (http://tpenguinltg.wordpress.com/)
+// @copyright   2015-2017, tPenguinLTG (http://tpenguinltg.wordpress.com/)
 // @run-at      document-start
 // ==/UserScript==
 
