@@ -25,7 +25,7 @@ function fetchJSONFile(path, callback, fallback) {
       }
     }
   };
-  httpRequest.open('GET', path);
+  httpRequest.open("GET", path);
   httpRequest.send();
 }
 
@@ -44,7 +44,7 @@ function redirectToClassicStats(baseUrl, statsType) {
       break;
   }
 
-  window.location.replace(baseUrl + '/wp-admin/index.php?' + query.join("&"));
+  window.location.replace(baseUrl + "/wp-admin/index.php?" + query.join("&"));
 }
 
 function doRedirect(uri) {
@@ -66,7 +66,7 @@ function doRedirect(uri) {
       function() {
         // use http instead of https in case the server doesn't support https
         // (e.g. for Jetpack sites)
-        redirectToClassicStats('http://' + blogDomain, statsType);
+        redirectToClassicStats("http://" + blogDomain, statsType);
       }
     );
   } else if (statsType != "insights") {
