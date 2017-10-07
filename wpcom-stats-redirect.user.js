@@ -14,6 +14,10 @@
 // ==/UserScript==
 
 var script = {
+  start: function(path) {
+    this.doRedirect(this.parseUri(path));
+  },
+
   assembleUrl: function(base, period, query) {
     var queryPart = ["page=stats"].concat(query);
 
@@ -105,7 +109,6 @@ var script = {
 
 if (typeof module == "object" && module != null) module.exports = script;
 
-// redirect unless new stats is explicitly requested
-//if (window.location.search.search(/from=wp-admin/) === -1) {
-//  doRedirect(window.location.pathname);
-//}
+if (typeof window == "object"
+    && window.location.search.search(/from=wp-admin/) === -1)
+  script.start(window.location.pathname);

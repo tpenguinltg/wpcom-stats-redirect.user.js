@@ -13,6 +13,21 @@ describe("stats redirect", function() {
     sandbox.restore();
   });
 
+  describe("start", function() {
+    it("should redirect using the parsed path", function() {
+      var tokens = { a: "b" };
+      var path = "/stats/example.com";
+      var parseUri = sandbox.stub(statsRedirect, "parseUri");
+      var doRedirect = sandbox.stub(statsRedirect, "doRedirect");
+      parseUri.returns(tokens);
+
+      statsRedirect.start(path);
+
+      sandbox.assert.calledWith(parseUri, path);
+      sandbox.assert.calledWith(doRedirect, tokens);
+    });
+  });
+
   describe("assembleUrl", function() {
     it("should set appropriate unit", function() {
       var url;
