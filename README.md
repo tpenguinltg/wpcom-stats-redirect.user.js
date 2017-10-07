@@ -10,6 +10,29 @@ Alternatively, visit the URL below:
 
 [https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/raw/master/wpcom-stats-redirect.user.js](https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/raw/master/wpcom-stats-redirect.user.js)
 
+## Tests
+
+The tests are written with the [Mocha][] testing framework and run in a [Node.js][] environment.
+
+Functions are stubbed using [Sinon][] and assertions are made using Chai (TDD style).
+
+[Mocha]: https://mochajs.org/
+[Node.js]: https://nodejs.org/
+[Sinon]: http://sinonjs.org/
+[Chai]: http://chaijs.com/
+
+### Setting Up the Test Environment
+
+1. Install [Node.js]
+2. Run `npm install` in the root directory of this project
+
+### Running the Tests
+
+To run the tests once, run `npm run test`.
+
+To run the tests continuously while developing, run `npm run test-dev`.
+
+
 ## Known Issues
 * The new interface may start loading and appear before the redirect occurs
 * The redirection will likely fail for Jetpack-enabled sites whose site root is
