@@ -1,6 +1,6 @@
 {
   "name": "wpcom-stats-redirect",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Redirects the new stats page to the classic stats page",
   "main": "wpcom-stats-redirect.user.js",
   "scripts": {
