@@ -49,3 +49,4 @@ To run the tests continuously while developing, run `npm run test-dev`.
 * **v2.1.2:** Get default blog more reliably
 * **v2.2.0:** Don't redirect if URL has `from=wp-admin` in query part
 * **v2.2.1:** Fix failed query part checking
+* **v2.3.0:** Add automated tests
