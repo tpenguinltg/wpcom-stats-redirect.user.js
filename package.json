@@ -1,0 +1,32 @@
+{
+  "name": "wpcom-stats-redirect",
+  "version": "2.2.1",
+  "description": "Redirects the new stats page to the classic stats page",
+  "main": "wpcom-stats-redirect.user.js",
+  "scripts": {
+    "test": "mocha wpcom-stats-redirect.test.js",
+    "test-dev": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpenguinltg/wpcom-stats-redirect.user.js.git"
+  },
+  "keywords": [
+    "wordpress",
+    "user",
+    "script",
+    "redirect",
+    "stats"
+  ],
+  "author": "tPenguinLTG",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tpenguinltg/wpcom-stats-redirect.user.js/issues"
+  },
+  "homepage": "https://github.com/tpenguinltg/wpcom-stats-redirect.user.js#readme",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.6"
+  }
+}
